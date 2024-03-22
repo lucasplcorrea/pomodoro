@@ -1,19 +1,31 @@
-<!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap" rel="stylesheet"/>
+    <title>Pomodoro Timer</title>
+  </head>
+  <body>
+    <main class="container">
+      <h1>Pomodoro Timer</h1>
+      <div id="pomodoro">
+      <img src="https://pngimg.com/uploads/tomato/tomato_PNG12592.png"
+          style="width: 350px; height: 350px"/>
+        <div id="timer">25:00</div>  
+        <button class="btn" id="btn-start" onclick="startPomodoro()">Iniciar</button>
+      </div> 
+      
+      </div>
+      
+      <button class="btn" onclick="startShortBreak()">Pausa curta</button>
+      <button class="btn" onclick="startLongBreak()">Pausa longa</button>
+      <button class="btn" onclick="stopTimer()">Parar Timer</button>
+    </main>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Pomodoro</title>
-</head>
-
-<body>
-    <h1>Exercícios de Stretching</h1>
-    <div id="exercises-container"></div>
-
-    
+    <script src="./js/timer.js"></script>
     <script src="./js/pomodoro.js"></script>
-</body>
-
+  </body>
 </html>
