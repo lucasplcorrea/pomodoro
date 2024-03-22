@@ -1,8 +1,8 @@
 // Sua chave de API
-const apiKey = 'YOUR_API_KEY';
+const apiKey = 'SUA_CHAVE_API';
 
 // URL da API para buscar exercícios de stretching
-const apiUrl = 'https://api.api-ninjas.com/v1/exercises?type=stretching';
+const apiUrl = 'https://api.api-ninjas.com/v1/exercises?type=stretching&difficulty=beginner';
 
 // Função para buscar os exercícios de stretching da API e exibir na página HTML
 function fetchStretchingExercises() {
@@ -18,31 +18,50 @@ function fetchStretchingExercises() {
     return response.json();
   })
   .then(data => {
-    displayExercises(data);
+    // Sorteia um exercício dentre os retornados pela API e exibe na página HTML
+    const selectedExercise = getRandomExercise(data);
+    if (selectedExercise) {
+      // Exibe o exercício na página HTML
+      displayExercise(selectedExercise);
+    } else {
+      console.log('Todos os exercícios já foram exibidos.');
+    }
   })
   .catch(error => {
     console.error('Erro:', error);
   });
 }
 
-// Função para exibir os exercícios na página HTML
-function displayExercises(exercises) {
-  const exercisesContainer = document.getElementById('exercises-container');
-  exercisesContainer.innerHTML = ''; // Limpa o conteúdo anterior, se houver
-
-  if (exercises && exercises.length > 0) {
-    const ul = document.createElement('ul');
-
-    exercises.forEach(exercise => {
-      const li = document.createElement('li');
-      li.textContent = exercise.name;
-      ul.appendChild(li);
-    });
-
-    exercisesContainer.appendChild(ul);
+// Função para exibir um exercício na página HTML
+function displayExercise(exercise) {
+  const exerciseContainer = document.getElementById('exercise-container');
+  if (exerciseContainer) {
+    exerciseContainer.textContent = exercise.name;
   } else {
-    exercisesContainer.textContent = 'Nenhum exercício de stretching encontrado.';
+    console.error('Elemento de contêiner de exercício não encontrado.');
   }
+}
+
+// Função para sortear um exercício dentre os disponíveis
+function getRandomExercise(exercises) {
+  const storedExercises = JSON.parse(localStorage.getItem('storedExercises')) || [];
+
+  const availableExercises = exercises.filter(exercise => !storedExercises.includes(exercise.name));
+
+  if (availableExercises.length === 0) {
+    // Todos os exercícios foram exibidos, então resetamos o armazenamento.
+    localStorage.setItem('storedExercises', JSON.stringify([]));
+    return null;
+  }
+
+  const randomIndex = Math.floor(Math.random() * availableExercises.length);
+  const selectedExercise = availableExercises[randomIndex];
+
+  // Armazena o exercício sorteado para evitar repetições
+  storedExercises.push(selectedExercise.name);
+  localStorage.setItem('storedExercises', JSON.stringify(storedExercises));
+
+  return selectedExercise;
 }
 
 // Chame a função para buscar os exercícios quando a página carregar
