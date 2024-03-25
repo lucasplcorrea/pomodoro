@@ -1,13 +1,32 @@
 //Variáveis que armazenam o intervalo de tempo e os minutos e segundos do timer.
 let timerInterval;
 let minutes, seconds;
+let isRunning = false; //Variável para controlar o estado on/off do timer.
+let pausedTime = 0; //Contador para verificar se há um tempo pausado
 
 function startTimer(durationInMinutes) {
-    clearInterval(timerInterval); // Limpa o intervalo de tempo existente.
-    minutes = durationInMinutes; // Define os minutos para a duração especificada e os segundos para 0.
-    seconds = 0;
-    displayTime(); // Exibe o tempo inicial do temporizador.
-    timerInterval = setInterval(updateTimer, 1000); // Inicia um novo intervalo do timer, chamando updateTimer a cada segundo (1000 milissegundos).
+    if (!isRunning) {
+        clearInterval(timerInterval); // Limpa o intervalo de tempo existente.
+        if (pausedTime > 0) { //Se há um tempo pausado, continue a partir desse tempo.
+            minutes = Math.floor(pausedTime / 60);
+            seconds = pausedTime % 60;
+            pausedTime = 0; //Reinicia o tempo pausado
+        }
+        else {
+            minutes = durationInMinutes;
+            seconds = 0;
+        }
+        displayTime();
+        timerInterval = setInterval(updateTimer, 1000);
+        document.getElementById("btn-start").textContent = "Pausar";
+        isRunning = true;
+    }
+    else {
+        clearInterval(timerInterval);
+        document.getElementById("btn-start").textContent = "Continuar";
+        isRunning = false;
+        pausedTime = minutes * 60 + seconds;//Armazena o tempo restante em segundos.
+    }
 }
 
 function updateTimer() {
@@ -19,12 +38,14 @@ function updateTimer() {
     } else { // Se os minutos e os segundos chegarem a 0, o Pomodoro é concluído.
         clearInterval(timerInterval);
         alert("Pomodoro finalizado!"); //alerta no final do timer
+        document.getElementById("btn-start").textContent = "Iniciar";
+        isRunning = false;
     }
     displayTime(); // Atualiza a exibição do tempo restante no temporizador.
 }
 
 //Exibe o tempo restante no timer no HTML com o ID "timer"
-function displayTime() { 
+function displayTime() {
     const timerDisplay = document.getElementById("timer"); // Pega o elemento do DOM com o ID "timer".
     // Atualiza o conteúdo do elemento com o tempo restante no formato "mm:ss".
     timerDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
@@ -44,7 +65,9 @@ function startLongBreak() {
 
 function stopTimer() { //Para o timer e o reinicia para 0 minutos e 0 segundos.
     clearInterval(timerInterval);
-    minutes = 0; // Reseta os minutos e segundos para 0.
+    minutes = 25; // Reseta os minutos e segundos para 0.
     seconds = 0;
     displayTime();
+    isRunning = false;
+    document.getElementById("btn-start").textContent = "Iniciar";//Altera o texto do botão para iniciar 
 }
