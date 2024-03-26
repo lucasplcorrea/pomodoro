@@ -63,13 +63,6 @@ function displayNextExercise() {
     }
 }
 
-// Função para traduzir o nome do exercício
-function translateExerciseName(name) {
-    // Aqui você irá implementar a lógica para traduzir o nome do exercício
-    // Pode-se utilizar o arquivo pt-br.json para fazer essa tradução
-    // Retorne o nome traduzido, se estiver disponível, ou null caso contrário
-}
-
 // Função para armazenar o exercício exibido no localStorage
 function saveDisplayedExercise(exerciseName) {
     let storedExercises = JSON.parse(localStorage.getItem('storedExercises')) || [];
