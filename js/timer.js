@@ -37,7 +37,7 @@ function updateTimer() {
         seconds = 59; // Reinicia os segundos para 59.
     } else { // Se os minutos e os segundos chegarem a 0, o Pomodoro é concluído.
         clearInterval(timerInterval);
-        alert("Pomodoro finalizado!"); //alerta no final do timer
+        alert("Pomodoro Finalizado!"); //alerta no final do timer
         document.getElementById("btn-start").textContent = "Iniciar";
         isRunning = false;
     }
