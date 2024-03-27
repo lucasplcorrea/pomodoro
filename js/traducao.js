@@ -214,37 +214,38 @@ const translatedExercises = [
     return name;
   }
   
-  // Função para exibir o próximo exercício na página HTML
-function displayNextExercise() {
-    const exerciseContainer = document.getElementById('exercise-container');
-    if (exerciseContainer && exerciseArray.length > 0) {
-      // Remove o primeiro exercício do array
-      const nextExercise = exerciseArray.shift();
-      // Traduzir o nome do exercício
-      const translatedName = translateExerciseName(nextExercise.name);
-      // Procurar o exercício traduzido no array traduzido
-      const translatedExercise = translatedExercises.find(exercise => exercise.name === nextExercise.name);
-      // Exibir todas as informações do exercício traduzido na página HTML
-      if (translatedExercise) {
-        const exerciseElement = document.createElement('div');
-        exerciseElement.innerHTML = `
-          <h2>${translatedName ? translatedName : nextExercise.name}</h2>
-          <p><strong>Tipo:</strong> ${translatedExercise.type}</p>
-          <p><strong>Músculo:</strong> ${translatedExercise.muscle}</p>
-          <p><strong>Equipamento:</strong> ${translatedExercise.equipment}</p>
-          <p><strong>Dificuldade:</strong> ${translatedExercise.difficulty}</p>
-          <p><strong>Instruções:</strong> ${translatedExercise.instructions}</p>
-        `;
-        exerciseContainer.innerHTML = '';
-        exerciseContainer.appendChild(exerciseElement);
-        // Armazenar o exercício exibido no localStorage
-        saveDisplayedExercise(nextExercise.name);
-      } else {
-        console.error(`Exercício traduzido não encontrado para ${nextExercise.name}`);
-      }
-    } else {
-      // Se não houver mais exercícios na variável local, buscar mais exercícios
-      fetchStretchingExercises();
-    }
-  }
-  
+
+
+// // Função para exibir o próximo exercício na página HTML
+// function displayNextExercise() {
+//     const exerciseContainer = document.getElementById('exercise-container');
+//     if (exerciseContainer && exerciseArray.length > 0) {
+//       // Remove o primeiro exercício do array
+//       const nextExercise = exerciseArray.shift();
+//       // Traduzir o nome do exercício
+//       const translatedName = translateExerciseName(nextExercise.name);
+//       // Procurar o exercício traduzido no array traduzido
+//       const translatedExercise = translatedExercises.find(exercise => exercise.name === nextExercise.name);
+//       // Exibir todas as informações do exercício traduzido na página HTML
+//       if (translatedExercise) {
+//         const exerciseElement = document.createElement('div');
+//         exerciseElement.innerHTML = `
+//           <h2>${translatedName ? translatedName : nextExercise.name}</h2>
+//           <p><strong>Tipo:</strong> ${translatedExercise.type}</p>
+//           <p><strong>Músculo:</strong> ${translatedExercise.muscle}</p>
+//           <p><strong>Equipamento:</strong> ${translatedExercise.equipment}</p>
+//           <p><strong>Dificuldade:</strong> ${translatedExercise.difficulty}</p>
+//           <p><strong>Instruções:</strong> ${translatedExercise.instructions}</p>
+//         `;
+//         exerciseContainer.innerHTML = '';
+//         exerciseContainer.appendChild(exerciseElement);
+//         // Armazenar o exercício exibido no localStorage
+//         saveDisplayedExercise(nextExercise.name);
+//       } else {
+//         console.error(`Exercício traduzido não encontrado para ${nextExercise.name}`);
+//       }
+//     } else {
+//       // Se não houver mais exercícios na variável local, buscar mais exercícios
+//       fetchStretchingExercises();
+//     }
+//   }
