@@ -52,7 +52,7 @@ function displayTime() {
 }
 
 function startPomodoro() {
-    startTimer(25); //Inicia um Pomodoro de 25 minutos.
+    startTimer(1); //Inicia um Pomodoro de 25 minutos.
 }
 
 function startShortBreak() {
