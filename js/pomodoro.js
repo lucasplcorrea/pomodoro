@@ -1,5 +1,5 @@
 // Sua chave de API
-const apiKey = 'SUA api AQUI';
+const apiKey = 'SUA API VAI AQUI';
 
 // URL base da API para buscar exercícios de stretching
 const apiUrl = 'https://api.api-ninjas.com/v1/exercises?type=stretching&difficulty=beginner';
@@ -42,26 +42,47 @@ function displayNextExercise() {
     if (exerciseModalBody && exerciseModalTitle && exerciseArray.length > 0) {
         // Remove o primeiro exercício do array
         const nextExercise = exerciseArray.shift();
-        // Traduz o nome do exercício, se estiver disponível no arquivo traducao.js
-        const translatedName = translateExerciseName(nextExercise.name);
         // Exibe o exercício no modal
-        exerciseModalTitle.textContent = translatedName ? translatedName : nextExercise.name;
+        exerciseModalTitle.textContent = translateExerciseName(nextExercise.name);
         // Limpa o conteúdo anterior do modal
         exerciseModalBody.innerHTML = '';
-        // Exibe informações sobre o exercício no modal
-        const translatedExercise = translatedExercises.find(exercise => exercise.name === nextExercise.name);
-        if (translatedExercise) {
-            exerciseModalBody.innerHTML = `
-                <p><strong>Tipo:</strong> ${translatedExercise.type}</p>
-                <p><strong>Músculo:</strong> ${translatedExercise.muscle}</p>
-                <p><strong>Equipamento:</strong> ${translatedExercise.equipment}</p>
-                <p><strong>Dificuldade:</strong> ${translatedExercise.difficulty}</p>
-                <p><strong>Instruções:</strong> ${translatedExercise.instructions}</p>
-            `;
-            // Armazena o exercício exibido no localStorage
-            saveDisplayedExercise(nextExercise.name);
+        // Verifica se há uma imagem definida para o exercício
+        if (nextExercise.hasOwnProperty('image')) {
+            console.log("Imagem Encontrada")
+            const exerciseImage = document.createElement('img');
+            exerciseImage.src = nextExercise.image;
+            exerciseModalBody.appendChild(exerciseImage);
         } else {
-            console.error(`Exercício traduzido não encontrado para ${nextExercise.name}`);
+            // Verifica se há uma tradução para o exercício
+            const translatedExercise = translatedExercises.find(exercise => exercise.name === nextExercise.name);
+            if (translatedExercise && translatedExercise.hasOwnProperty('image')) {
+                console.log("Imagem Encontrada no arquivo de tradução")
+                const exerciseImage = document.createElement('img');
+                exerciseImage.src = translatedExercise.image;
+                exerciseModalBody.appendChild(exerciseImage);
+            } else if (translatedExercise) {
+                console.log("Imagem Não Encontrada")
+                exerciseModalBody.innerHTML = `
+                    <p><strong>Tipo:</strong> ${translatedExercise.type}</p>
+                    <p><strong>Músculo:</strong> ${translatedExercise.muscle}</p>
+                    <p><strong>Equipamento:</strong> ${translatedExercise.equipment}</p>
+                    <p><strong>Dificuldade:</strong> ${translatedExercise.difficulty}</p>
+                    <p><strong>Instruções:</strong> ${translatedExercise.instructions}</p>
+                `;
+                // Armazena o exercício exibido no localStorage
+                saveDisplayedExercise(nextExercise.name);
+            } else {
+                console.log("Nenhuma Tradução Encontrada, Exibindo em Inglês")
+                exerciseModalBody.innerHTML = `
+                    <p><strong>Tipo:</strong> ${nextExercise.type}</p>
+                    <p><strong>Músculo:</strong> ${nextExercise.muscle}</p>
+                    <p><strong>Equipamento:</strong> ${nextExercise.equipment}</p>
+                    <p><strong>Dificuldade:</strong> ${nextExercise.difficulty}</p>
+                    <p><strong>Instruções:</strong> ${nextExercise.instructions}</p>
+                `;
+                // Armazena o exercício exibido no localStorage
+                saveDisplayedExercise(nextExercise.name);
+            }
         }
     } else {
         // Se não houver mais exercícios na variável local, buscar mais exercícios

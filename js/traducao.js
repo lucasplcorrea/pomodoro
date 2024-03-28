@@ -3,62 +3,68 @@ const translatedExercises = [
     {
         "id": 0,
         "name": "Standing Hip Circles",
-        "brName": "Movimento circular do quadril em pé",
+        "brName": "Círculos de Quadril em Pé",
         "type": "Alongamento",
-        "muscle": "Abdutores", 
+        "muscle": "Abdutores",
         "equipment": "Apenas o Corpo",
         "difficulty": "Iniciante",
-        "instructions": "Segurando em um apoio vertical, inicie ficando em pé em apenas uma perna. Dobre a perna sem apoio para formar um ângulo de 90 graus no joelho. Abra o quadril o máximo que puder, tentando fazer um grande círculo com o joelho. Realize esse movimento lentamente repetidas vezes e repita com a outra perna.."
-    }, 
+        "instructions": "Segurando em um apoio vertical, inicie ficando em pé em apenas uma perna. Dobre a perna sem apoio para formar um ângulo de 90 graus no joelho. Abra o quadril o máximo que puder, tentando fazer um grande círculo com o joelho. Realize esse movimento lentamente repetidas vezes e repita com a outra perna.",
+        "image": "./img/exercise/Standing Hip Circles.svg"
+    },
     {
         "id": 1,
         "name": "Groiners",
         "brName": "Groiners",
         "type": "Alongamento",
-        "muscle": "Adutores", 
-        "equipment": "Apenas o Corpo", 
+        "muscle": "Adutores",
+        "equipment": "Apenas o Corpo",
         "difficulty": "beginner",
-        "instructions": "Inicie na posição de uma flexão de braços no chão. Essa será sua posição inicial. Usando as duas pernas, salte para a frente aterrisando com os pés próximos as mãos. Mantenha a cabeça erguida ao fazer isso. Retorne a posição inicial e imediatamente repita o movimento, continuando por 10 a 20 repetições."
+        "instructions": "Inicie na posição de uma flexão de braços no chão. Essa será sua posição inicial. Usando as duas pernas, salte para a frente aterrisando com os pés próximos as mãos. Mantenha a cabeça erguida ao fazer isso. Retorne a posição inicial e imediatamente repita o movimento, continuando por 10 a 20 repetições.",
+        "image": "./img/exercise/Groiners.svg"
     },
     {
         "id": 2,
         "name": "Stomach Vacuum",
-        "brName": "Vácuo abdominal",
-        "type": "Alongamento", 
+        "brName": "Vácuo de Estômago",
+        "type": "Alongamento",
         "muscle": "Abdominal",
         "equipment": "Apenas o Corpo",
         "difficulty": "Iniciante",
-        "instructions": "Para iniciar, fique em pé com os pés separados na largura dos ombros. Coloque as mãos no quadril. Essa é a posição inicial. Agora lentamente, inspire quanto ar conseguir e comece a expirar também quanto ar conseguir, enquanto contrai o estômago para dentro o máximo que conseguir e mantenha essa posição. Tente imaginar seu umbigo tocando sua espinha dorsal. Uma contração isométrica dura aproximadamente 20 segundos. Durante os 20 segundos segurando, tente respirar normalmente. Então inspire e traga seu estômago de volta a posição inicial. Assim que tiver praticado bastante esse exercício, tente realizá-lo por mais que 20 segundos. Dica: Você pode conseguir chegar a 40-60 segundos. Repita pela quantidade indicada de repetições."
-    }, 
+        "instructions": "Para iniciar, fique em pé com os pés separados na largura dos ombros. Coloque as mãos no quadril. Essa é a posição inicial. Agora lentamente, inspire quanto ar conseguir e comece a expirar também quanto ar conseguir, enquanto contrai o estômago para dentro o máximo que conseguir e mantenha essa posição. Tente imaginar seu umbigo tocando sua espinha dorsal. Uma contração isométrica dura aproximadamente 20 segundos. Durante os 20 segundos segurando, tente respirar normalmente. Então inspire e traga seu estômago de volta a posição inicial. Assim que tiver praticado bastante esse exercício, tente realizá-lo por mais que 20 segundos. Dica: Você pode conseguir chegar a 40-60 segundos. Repita pela quantidade indicada de repetições.",
+        "image": "./img/exercise/Stomach Vacuum.svg"
+    },
     {
         "id": 3,
         "name": "Side Wrist Pull",
-        "brName": "Extensão lateral do Punho", 
-        "type": "Alongamento", 
-        "muscle": "Ombros", 
-        "equipment": "Apenas o Corpo", 
+        "brName": "Tração Lateral do Pulso",
+        "type": "Alongamento",
+        "muscle": "Ombros",
+        "equipment": "Apenas o Corpo",
         "difficulty": "Iniciante",
-        "instructions": "Esse alongamento funciona melhor em pé. Cruze o braço esquerdo pela linha central do seu corpo and segure o punho esquerdo na mão direita na altura do quadril. Inicie o alongamento com o braço esquerdo levemente flexionado. Lentamente estique, puxe e levante o braço até a altura do ombro, como mostrado na figura. Sinta o alongamento iniciar nas suas costas, não nos ombros, e não puxe muito forte nas articulações do ombro. Troque de lado."
+        "instructions": "Esse alongamento funciona melhor em pé. Cruze o braço esquerdo pela linha central do seu corpo and segure o punho esquerdo na mão direita na altura do quadril. Inicie o alongamento com o braço esquerdo levemente flexionado. Lentamente estique, puxe e levante o braço até a altura do ombro, como mostrado na figura. Sinta o alongamento iniciar nas suas costas, não nos ombros, e não puxe muito forte nas articulações do ombro. Troque de lado.",
+        "image": "./img/exercise/Side Wrist Pull.svg"
     },
     {
         "id": 4,
         "name": "Standing leg swing",
-        "brName": "Balanço de perna em pé",
-        "type": "Alongamento", 
-        "muscle": "Posterior da Coxa", 
-        "equipment": "Apenas o Corpo", 
+        "brName": "Balanço de Perna em Pé",
+        "type": "Alongamento",
+        "muscle": "Posterior da Coxa",
+        "equipment": "Apenas o Corpo",
         "difficulty": "Iniciante",
-        "instructions": "Fique em pé ao lado de uma cadeira ou outro suporte, segurando nela com uma mão. Balance sua perna para a frente, mantendo a perna esticada. Continue balançando a perna para trás, trazendo a perna o quanto sua flexibilidade permitir. Repita de 5 a 10 vezes e troque de perna."
+        "instructions": "Fique em pé ao lado de uma cadeira ou outro suporte, segurando nela com uma mão. Balance sua perna para a frente, mantendo a perna esticada. Continue balançando a perna para trás, trazendo a perna o quanto sua flexibilidade permitir. Repita de 5 a 10 vezes e troque de perna.",
+        "image": "./img/exercise/Standing leg swing.svg"
     },
     {
         "id": 5,
         "name": "Side Leg Raises",
-        "brName": "Elevação lateral de perna",
-        "type": "Alongamento", 
+        "brName": "Elevações Laterais das Pernas",
+        "type": "Alongamento",
         "muscle": "Adutores",
         "equipment": "Apenas o Corpo",
         "difficulty": "Iniciante",
-        "instructions": "Fique em pé ao lado de uma cadeira, que você pode usar como suporte. Fique em pé em uma perna. Essa será sua posição inicial. Mantendo sua perna esticada, levante-a para o lado o máximo que conseguir, e balance para baixo, permitindo que a perna cruze pela outra perna. Repita do movimento de 5 a 10 vezes, aumentando a amplitude a cada movimento."
+        "instructions": "Fique em pé ao lado de uma cadeira, que você pode usar como suporte. Fique em pé em uma perna. Essa será sua posição inicial. Mantendo sua perna esticada, levante-a para o lado o máximo que conseguir, e balance para baixo, permitindo que a perna cruze pela outra perna. Repita do movimento de 5 a 10 vezes, aumentando a amplitude a cada movimento.",
+        "image": "./img/exercise/Side Leg Raises.svg"
     },
     {
         "id": 6,
@@ -66,39 +72,43 @@ const translatedExercises = [
         "brName": "Inchworm",
         "type": "Alongamento",
         "muscle": "Posterior da Coxa",
-        "equipment": "Apenas o Corpo", 
-        "difficulty": "Iniciante", 
-        "instructions": "Fique em pé com as pernas fechadas e os pés juntos. Mantendo as pernas esticadas, alongue para baixo e coloque as mãos no chão na frente do corpo. Essa será a posição inicial. Inicie deslocando as mãos para a frente lentamente, alternando entre esquerda e direita. Enquanto faz isso, incline apenas o quadril, mantendo as pernas esticadas. Continue até seu corpo estar em poisção vertical ao chão, na posição de flexão de braço. Agora, mantenha os braços parados no lugar e dê passos curtos, movendo apenas poucos centimetros por vez. Continue andando até seus pés chegarem perto das mãos, mantendo as pernas esticadas enquanto faz isso."
+        "equipment": "Apenas o Corpo",
+        "difficulty": "Iniciante",
+        "instructions": "Fique em pé com as pernas fechadas e os pés juntos. Mantendo as pernas esticadas, alongue para baixo e coloque as mãos no chão na frente do corpo. Essa será a posição inicial. Inicie deslocando as mãos para a frente lentamente, alternando entre esquerda e direita. Enquanto faz isso, incline apenas o quadril, mantendo as pernas esticadas. Continue até seu corpo estar em poisção vertical ao chão, na posição de flexão de braço. Agora, mantenha os braços parados no lugar e dê passos curtos, movendo apenas poucos centimetros por vez. Continue andando até seus pés chegarem perto das mãos, mantendo as pernas esticadas enquanto faz isso.",
+        "image": "./img/exercise/Inchworm.svg"
     },
     {
         "id": 7,
         "name": "Ankle Circles",
-        "brName": "Círculos com o tornozelo",
+        "brName": "Círculos de Tornozelo",
         "type": "Alongamento",
-        "muscle": "Panturrilhas", 
+        "muscle": "Panturrilhas",
         "equipment": "Apenas o Corpo",
         "difficulty": "Iniciante",
-        "instructions": "Use um objeto firme para se sustentar, como um rack de agachamento. Levante a perna direita no ar (apenas alguns centímetros do chão) e execute um movimento circular com o dedão do pé. Imagine que está desenhando um grande círculo com o dedo. Dica: Um círculo equivale a 1 repetição. Respire normalmente enquanto executa o movimento. Quando terminar com o pé direito, repita com a perna esquerda. Sem variações."
+        "instructions": "Use um objeto firme para se sustentar, como um rack de agachamento. Levante a perna direita no ar (apenas alguns centímetros do chão) e execute um movimento circular com o dedão do pé. Imagine que está desenhando um grande círculo com o dedo. Dica: Um círculo equivale a 1 repetição. Respire normalmente enquanto executa o movimento. Quando terminar com o pé direito, repita com a perna esquerda. Sem variações.",
+        "image": "./img/exercise/Ankle Circles.svg"
     },
     {
         "id": 8,
         "name": "Standing Biceps Stretch",
-        "brName": "Alongamento do Bíceps em Pé",
-        "type": "Alongamento", 
+        "brName": "Alongamento de Bíceps em Pé",
+        "type": "Alongamento",
         "muscle": "bíceps",
         "equipment": "Apenas o Corpo",
         "difficulty": "Iniciante",
-        "instructions": "Entrelace as mãos ao redor das costas com a palma das mãos se enconstando, estique os braços e depois gire-os até as palmas das mãos virarem para fora. Levante os braços para cima e segure até sentir o bíceps alongar."
-    }, 
+        "instructions": "Entrelace as mãos ao redor das costas com a palma das mãos se enconstando, estique os braços e depois gire-os até as palmas das mãos virarem para fora. Levante os braços para cima e segure até sentir o bíceps alongar.",
+        "image": "./img/exercise/Standing Biceps Stretch.svg"
+    },
     {
         "id": 9,
         "name": "Groin and Back Stretch",
-        "brName": "Alongamento das Costas e Virilha", 
-        "type": "Alongamento", 
+        "brName": "Alongamento de Virilha e Costas",
+        "type": "Alongamento",
         "muscle": "Adutores",
         "equipment": "Apenas o Corpo",
         "difficulty": "Iniciante",
-        "instructions": "Sente no chão com os joelhos flexionados e pés unidos. Entrelace os dedos atrás da cabeça. Essa será sua posição inicial. Flexione o tronco para a frente, trazendo os cotovelos para dentro das pernas. Depois de uma breve pausa, retorne para a posição inicial com a cabeça para cima e as costas retas. Repita de 10 a 20 vezes."
+        "instructions": "Sente no chão com os joelhos flexionados e pés unidos. Entrelace os dedos atrás da cabeça. Essa será sua posição inicial. Flexione o tronco para a frente, trazendo os cotovelos para dentro das pernas. Depois de uma breve pausa, retorne para a posição inicial com a cabeça para cima e as costas retas. Repita de 10 a 20 vezes.",
+        "image": "./img/exercise/Groin and Back Stretch.svg"
     },
     {
         "id": 10,
@@ -201,51 +211,15 @@ const translatedExercises = [
         "instructions": "Sente-se ou fique com os pés levemente afastados. Coloque as mãos nos ombros com os cotovelos na altura dos ombros e apontando para fora. Lentamente faça um círculo com os cotovelos. Expire enquanto começa o círculo e inspire enquanto completa o círculo."
     }
 ];
-  
-  // Função para traduzir o nome do exercício
-  function translateExerciseName(name) {
+
+// Função para traduzir o nome do exercício
+function translateExerciseName(name) {
     // Procurar o nome do exercício no array de tradução
     const translatedExercise = translatedExercises.find(exercise => exercise.name === name);
     // Se encontrar a tradução, retornar o nome traduzido
     if (translatedExercise) {
-      return translatedExercise.brName;
+        return translatedExercise.brName;
     }
     // Se não encontrar a tradução, retornar o nome original
     return name;
-  }
-  
-
-
-// // Função para exibir o próximo exercício na página HTML
-// function displayNextExercise() {
-//     const exerciseContainer = document.getElementById('exercise-container');
-//     if (exerciseContainer && exerciseArray.length > 0) {
-//       // Remove o primeiro exercício do array
-//       const nextExercise = exerciseArray.shift();
-//       // Traduzir o nome do exercício
-//       const translatedName = translateExerciseName(nextExercise.name);
-//       // Procurar o exercício traduzido no array traduzido
-//       const translatedExercise = translatedExercises.find(exercise => exercise.name === nextExercise.name);
-//       // Exibir todas as informações do exercício traduzido na página HTML
-//       if (translatedExercise) {
-//         const exerciseElement = document.createElement('div');
-//         exerciseElement.innerHTML = `
-//           <h2>${translatedName ? translatedName : nextExercise.name}</h2>
-//           <p><strong>Tipo:</strong> ${translatedExercise.type}</p>
-//           <p><strong>Músculo:</strong> ${translatedExercise.muscle}</p>
-//           <p><strong>Equipamento:</strong> ${translatedExercise.equipment}</p>
-//           <p><strong>Dificuldade:</strong> ${translatedExercise.difficulty}</p>
-//           <p><strong>Instruções:</strong> ${translatedExercise.instructions}</p>
-//         `;
-//         exerciseContainer.innerHTML = '';
-//         exerciseContainer.appendChild(exerciseElement);
-//         // Armazenar o exercício exibido no localStorage
-//         saveDisplayedExercise(nextExercise.name);
-//       } else {
-//         console.error(`Exercício traduzido não encontrado para ${nextExercise.name}`);
-//       }
-//     } else {
-//       // Se não houver mais exercícios na variável local, buscar mais exercícios
-//       fetchStretchingExercises();
-//     }
-//   }
+}
