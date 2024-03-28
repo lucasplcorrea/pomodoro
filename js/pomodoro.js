@@ -1,5 +1,5 @@
 // Sua chave de API
-const apiKey = 'YOUR API KEY';
+const apiKey = 'SUA api AQUI';
 
 // URL base da API para buscar exercícios de stretching
 const apiUrl = 'https://api.api-ninjas.com/v1/exercises?type=stretching&difficulty=beginner';
