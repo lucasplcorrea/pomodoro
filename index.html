@@ -1,37 +1,65 @@
+<!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap"
-    rel="stylesheet" />
-  <title>Pomodoro Timer</title>
-</head>
-
-<body>
-  <main class="container">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <title>Pomodoro Timer</title>
+  </head>
+  <body>
     <h1>Pomodoro Timer</h1>
-    <div id="pomodoro">
-      <img src="https://pngimg.com/uploads/tomato/tomato_PNG12592.png" style="width: 350px; height: 350px" />
-      <div id="timer">25:00</div>
-      <button class="btn" id="btn-start" onclick="startPomodoro()">Iniciar</button>
-    </div>
+    <main class="container">
+      <div class="pomodoro-timer">
+        <div id="pomodoro">
+          <img
+            src="https://pngimg.com/uploads/tomato/tomato_PNG12592.png"
+            class="tomato"
+          />
 
-    <button class="btn" onclick="startShortBreak()">Pausa curta</button>
-    <button class="btn" onclick="startLongBreak()">Pausa longa</button>
-    <button class="btn" onclick="stopTimer()">Parar Timer</button>
-  </main>
-  <div class="container">
-    <h2>Exercício Escolhido</h2>
-    <div id="exercise-container"></div>
-  </div>
+          <div id="timer-status" class="timer-status"></div>
+          <div class="clock">
+            <span class="hidden" id="hour"></span>
+            <span id="minutes"></span>
+            <span id="seconds"></span>
+          </div>
+        </div>
+      </div>
 
-  <script src="./js/timer.js"></script>
-  <script src="./js/pomodoro.js"></script>
-</body>
+      <div class="controls">
+        <div class="focus-session">
+          <span class="header">Focus time</span>
+          <span id="focus-time"></span>
+          <button class="btn-minus" id="focus-minus" type="button">-</button>
+          <button class="btn-plus" id="focus-plus" type="button">+</button>
+        </div>
+        <div class="break-session">
+          <span class="header">Break time</span>
+          <span id="break-time"></span>
+          <button class="btn-minus" id="break-minus" type="button">-</button>
+          <button class="btn-plus" id="break-plus" type="button">+</button>
+        </div>
+        <div class="buttons">
+          <button class="timer-button" id="start">Iniciar</button>
+          <button class="timer-button" id="stop">Parar</button>
+        </div>
+      </div>
 
+      <div class="stretching hidden">
+        <h2>Alongamento</h2>
+        <div id="stretching-container">alongamento aqui</div>
+        <button class="timer-button" id="stretching-finish">
+          Finalizar alongamento
+        </button>
+      </div>
+    </main>
+
+    <script src="./js/timer.js"></script>
+    <script src="./js/pomodoro.js"></script>
+  </body>
 </html>

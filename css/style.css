@@ -5,49 +5,135 @@
 }
 
 body {
-    font-family: 'Noto sans', sans-serif;
+    font-family: "Exo", sans-serif;
     background-color: #e6d1b1;
-    display: flex;
-    justify-content: center;
     align-items: center;
     height: 100vh;
     min-width: 350px;
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    max-width: 800px;
     margin: auto;
-    text-align: center;
+    justify-content: center;
 }
 
 h1 {
     font-family: 'Pacifico', sans-serif;
     font-size: 40px;
     color: #333;
+    text-align: center;
+    margin: 50px auto;
 }
 
 #pomodoro {
-    margin: 0 auto;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
     padding: 0px 10px;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    /* Ajustado para o tamanho do conteúdo */
 }
 
-#timer {
-    color: #fff;
+.tomato {
+    width: 450px;
+    height: 450px;
+    z-index: -1;
+    position: relative;
+}
+
+.hidden {
+    display: none;
+}
+.timer-status {
+    color: #f1efef;
     font-size: 60px;
     font-weight: bold;
     position: absolute;
-    top: 55%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.btn {
+.clock {
+    margin-top: 20px;
+    color: #f1efef;
+    font-size: 60px;
+    font-weight: bold;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.controls {
+    width: 600px;
+    margin: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    justify-content: space-between;
+}
+
+.controls .focus-session,
+.controls .break-session {
+    width: 300px;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 40px;
+    gap: 5px;
+}
+
+.controls .focus-session .header,
+.controls .focus-session #focus-time,
+.controls .focus-session #break-time,
+.controls .break-session .header,
+.controls .break-session #focus-time,
+.controls .break-session #break-time {
+    width: 100%;
+    text-align: center;
+    margin: 16px;
+    font-weight: bold;
+    
+}
+
+.controls .focus-session #focus-time,
+.controls .focus-session #break-time,
+.controls .break-session #focus-time,
+.controls .break-session #break-time {
+    font-size: 30px;
+    color: #101010;
+}
+
+.btn-minus,
+.btn-plus {
+    width: 50px;
+    padding: 8px;
+    cursor: pointer;
+    background: #4f8760;
+    border: none;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.buttons {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.timer-button {
     margin: 10px;
     padding: 8px 10px;
     color: white;
-    font-size: 20px;
+    font-size: 30px;
     cursor: pointer;
     background: #4f8760;
     border: none;
@@ -55,18 +141,17 @@ h1 {
     cursor: pointer;
 }
 
-#btn-start {
-    height: 40px;
-    width: 90px;
-    border-radius: 20px;
-    position: absolute;
-    bottom: 8%;
-    left: 43%;  
-    background: #4f8760;
-    border: 2px solid white;
-    padding: 5px;
-}
-
 button:hover {
     background-color: #43604c;
+}
+
+.stretching h2{
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+}
+
+#stretching-container {
+    width: 350px;
+    height: 310px
 }
