@@ -147,6 +147,10 @@ h1 {
     cursor: pointer;
 }
 
+.btnn.exercicio{
+    width:200px;
+}
+
 button:hover {
     background-color: #ffffff;
     border: 2px solid #4f8760;
@@ -167,3 +171,48 @@ button:hover {
     outline: 0;
     right: 150px;
 }
+
+.modal-body{
+    background-color: #fff;
+}
+
+.modal-header{
+    background-color: #e6d1b1;
+}
+
+.modal-title{
+    width: 100%;
+    text-align: center;
+    color:#4e4e4e;
+    font-family: 'Pacifico', sans-serif;
+}
+
+.modal-footer{
+    background-color:#e6d1b1 ;
+}
+
+.btn-primary{
+    background-color: #ffffff;
+    border: none;
+    color:#4f8760;
+    --bs-btn-hover-bg:#4f8760;
+    --bs-btn-hover-border-color:none;
+    --bs-btn-active-bg:#4f8760;
+    --bs-btn-disabled-bg:#4f8760;
+    --bs-btn-active-border-color:none;
+}
+
+.btn-secondary{
+    background-color: #ffffff;
+    border: none;
+    color:#4f8760;
+    --bs-btn-hover-bg:#4f8760;
+    --bs-btn-hover-border-color:none;
+    --bs-btn-active-bg:#4f8760;
+    --bs-btn-disabled-bg:#4f8760;
+    --bs-btn-active-border-color:none;
+}
+
+/* .bs-btn-hover-bg: {
+    color:#fff
+}; */
