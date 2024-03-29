@@ -8,10 +8,7 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap" rel="stylesheet"/>
     <title>Pomodoro Timer</title>
   </head>
 
@@ -20,7 +17,7 @@
     <main class="container">
       <div class="pomodoro-timer">
         <div id="pomodoro">
-          <img class="tomato"/>
+          <div class="tomato"></div>
           <div id="timer-status" class="timer-status"></div>
           <div class="clock">
             <span class="hidden" id="hour"></span>
@@ -58,7 +55,7 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h2 class="modal-title" id="exerciseModalTitle">O NOME DO EXERCÍCIO DEVE VIR AQUI</h2>
+              <h2 class="modal-title" id="exerciseModalTitle">EXERCÍCIO</h2>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" id="exerciseModalBody">
@@ -67,7 +64,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-              <button type="button" class="btn btn-primary" id="btn-next-exercise">Próximo Exercício</button>
+              <button type="button" class="btn btn-primary" id="btn-next-exercise">Escolher Outro Exercício</button>
             </div>
           </div>
         </div>
