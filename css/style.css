@@ -5,80 +5,152 @@
 }
 
 body {
-    font-family: 'Noto sans', sans-serif;
+    font-family: "Exo", sans-serif;
     background-color: #e6d1b1;
-    display: flex;
-    justify-content: center;
     align-items: center;
     height: 100vh;
     min-width: 350px;
 }
 
 .container {
-    height: 80%;
-    width: 100%;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    margin: auto;
+    height: 80%;
     align-items: center;
-}
-
-figure{
-    width: 408px;
-    height: 400px;
-    background-image: url("../img/tomato.png");
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 h1 {
     font-family: 'Pacifico', sans-serif;
-    font-size: 65px;
+    font-size: 60px;
     color: #333;
     text-align: center;
-    margin-bottom: 25px;
+    margin: 30px auto;
 }
 
-#timer {
-    color: #fff;
-    font-size: 75px;
-    font-weight: bold;
+#pomodoro {
     position: relative;
-    left: 90px;
-    top: 90px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0px 10px;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    /* Ajustado para o tamanho do conteúdo */
+}
+
+.tomato {
+    width: 350px;
+    height: 350px;
+    position: relative;
+
+    background-image: url("../img/tomato.png");
+    background-size: contain;
+    object-fit: cover;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.timer-status {
+    color: #f1efef;
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    top: 40%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.btnn {
-    height: 40px;
-    border-radius: 20px;
-    background: #4f8760;
-    border: 2px solid white;
-    padding: 5px; 
-    color:#fff;
+.clock {
+    margin-top: 20px;
+    color: #f1efef;
+    font-size: 75px;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
 }
 
-.btnn.start{
-    width: 100px;
-    margin: 20px;
+.controls {
+    width: 600px;
+    margin: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    justify-content: space-between;
 }
-.btnn.pause{
-    width:150px;
+
+.controls .focus-session,
+.controls .break-session {
+    width: 300px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 30px;
+    gap: 5px;
+}
+
+.controls .focus-session .header,
+.controls .focus-session #focus-time,
+.controls .focus-session #break-time,
+.controls .break-session .header,
+.controls .break-session #focus-time,
+.controls .break-session #break-time {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    
+}
+
+.controls .focus-session #focus-time,
+.controls .focus-session #break-time,
+.controls .break-session #focus-time,
+.controls .break-session #break-time {
+    font-size: 20px;
+    color: #101010;
+}
+
+.btn-minus,
+.btn-plus {
+    width: 40px;
+    cursor: pointer;
+    background: #4f8760;
+    border: none;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.buttons {
+    margin: 10px auto;
+    text-align: center;
+}
+
+.control-button {
+    margin: 10px;
+    padding: 8px 10px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    background: #4f8760;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 button:hover {
     background-color: #ffffff;
     border: 2px solid #4f8760;
-    color:#4f8760;
-}
-
-.box-botoes{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 120px;
+    color: #4f8760;
 }
 
 .modal-content {
