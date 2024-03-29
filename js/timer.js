@@ -104,12 +104,14 @@ function countDown() {
         startTime = breakTime;
         timerType = 'Pausa';
         timerStatus.innerHTML = timerType;
+        alert("Tempo de pausa iniciado!");
         }
         else {
         currentTime = focusTime;
         startTime = focusTime;
         timerType = 'Foco';
         timerStatus.innerHTML = timerType;
+        alert("Tempo de foco iniciado!");
         }
     }
     }
@@ -180,16 +182,23 @@ for (var i = 0; i < minusButton.length; i++) {
     minusButton[i].addEventListener('click', function (e) {
         if (!timerActive) {
             if (e.target.id === 'focus-minus') {
-                if(focusTime > 300) {
+                if (focusTime >= 300) {
                     focusTime -= 300;
                     currentTime = focusTime;
                     startTime = focusTime;
                     displayChangedTime(e, focusTime);
                     currentTimer();
+                } else if (focusTime === 300 && breakTime >= 300) {
+                    focusTime -= 300;
+                    breakTime -= 300;
+                    currentTime = focusTime;
+                    startTime = focusTime;
+                    displayChangedTime(e, focusTime);
+                    currentTimer();
+                    displayChangedTime(e, breakTime);
                 }
-            } 
-            else if (e.target.id === 'break-minus') {
-                if(focusTime > 300) {
+            } else if (e.target.id === 'break-minus') {
+                if (breakTime > 300) {
                     breakTime -= 300;
                     displayChangedTime(e, breakTime);
                     currentTimer();
