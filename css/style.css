@@ -108,7 +108,7 @@ h1 {
     width: 100%;
     text-align: center;
     font-weight: bold;
-    
+
 }
 
 .controls .focus-session #focus-time,
@@ -147,14 +147,13 @@ h1 {
     cursor: pointer;
 }
 
-.btnn.exercicio{
-    width:200px;
-}
-
 button:hover {
     background-color: #ffffff;
     border: 2px solid #4f8760;
     color: #4f8760;
+    border-radius: var(--bs-modal-border-radius);
+    outline: 0;
+    right: 150px;
 }
 
 .modal-content {
@@ -172,47 +171,49 @@ button:hover {
     right: 150px;
 }
 
-.modal-body{
+
+.btnn.exercicio {
+    width: 200px;
+}
+
+
+.modal-body {
     background-color: #fff;
 }
 
-.modal-header{
+.modal-header {
     background-color: #e6d1b1;
 }
 
-.modal-title{
+.modal-title {
     width: 100%;
     text-align: center;
-    color:#4e4e4e;
+    color: #4e4e4e;
     font-family: 'Pacifico', sans-serif;
 }
 
-.modal-footer{
-    background-color:#e6d1b1 ;
+.modal-footer {
+    background-color: #e6d1b1;
 }
 
-.btn-primary{
+.btn-primary {
     background-color: #ffffff;
     border: none;
-    color:#4f8760;
-    --bs-btn-hover-bg:#4f8760;
-    --bs-btn-hover-border-color:none;
-    --bs-btn-active-bg:#4f8760;
-    --bs-btn-disabled-bg:#4f8760;
-    --bs-btn-active-border-color:none;
+    color: #4f8760;
+    --bs-btn-hover-bg: #4f8760;
+    --bs-btn-hover-border-color: none;
+    --bs-btn-active-bg: #4f8760;
+    --bs-btn-disabled-bg: #4f8760;
+    --bs-btn-active-border-color: none;
 }
 
-.btn-secondary{
+.btn-secondary {
     background-color: #ffffff;
     border: none;
-    color:#4f8760;
-    --bs-btn-hover-bg:#4f8760;
-    --bs-btn-hover-border-color:none;
-    --bs-btn-active-bg:#4f8760;
-    --bs-btn-disabled-bg:#4f8760;
-    --bs-btn-active-border-color:none;
+    color: #4f8760;
+    --bs-btn-hover-bg: #4f8760;
+    --bs-btn-hover-border-color: none;
+    --bs-btn-active-bg: #4f8760;
+    --bs-btn-disabled-bg: #4f8760;
+    --bs-btn-active-border-color: none;
 }
-
-/* .bs-btn-hover-bg: {
-    color:#fff
-}; */
