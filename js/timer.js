@@ -132,15 +132,6 @@ function countDown() {
     }
 }
 
-// // Event Listener para o botão de Fechar do modal
-// document.getElementById("closeModal").addEventListener("click", function() {
-//     if (timerActive) { 
-//         var modal = document.getElementById("exampleModal");
-//         modal.classList.remove("show");
-//         modal.style.display = "none";
-//     }
-// });
-
 // Função para iniciar ou pausar o temporizador
 function toggleTimer() {
     if (timerActive) {
