@@ -123,7 +123,7 @@ const translatedExercises = [
     {
         "id": 11,
         "name": "Knee Circles",
-        "brName": "Círculos de Joelho",
+        "brName": "Círculos com os Joelhos",
         "type": "Alongamento",
         "muscle": "Panturrilhas",
         "equipment": "Apenas o Corpo",
@@ -143,17 +143,17 @@ const translatedExercises = [
     {
         "id": 13,
         "name": "Sit Squats",
-        "brName": "Agachamentos Sentados",
+        "brName": "Agachamento Sentado",
         "type": "Alongamento",
         "muscle": "Quadríceps",
         "equipment": "Apenas o Corpo",
         "difficulty": "Iniciante",
-        "instructions": "Fique em pé com os pés na largura dos ombros. Esta será sua posição inicial. Inicie o movimento flexionando os joelhos e os quadris, sentando-se com os quadris para trás. Continue até agachar uma parte do caminho, mas acima do paralelo, e reverta rapidamente o movimento até retornar à posição inicial. Repita por 5-10 repetições."
+        "instructions": "Fique em pé com os pés abertos na largura dos ombros. Esta será sua posição inicial. Inicie o movimento flexionando os joelhos e os quadris, sentando-se com os quadris para trás. Agache até suas pernas ficarem quase paralelas ao chão e reverta rapidamente o movimento até retornar à posição inicial. Repita por 5-10 repetições."
     },
     {
         "id": 14,
         "name": "Calf SMR",
-        "brName": "SMR de Panturrilhas",
+        "brName": "Liberação Miofascial de Panturrilhas com Rolo",
         "type": "Alongamento",
         "muscle": "Panturrilhas",
         "equipment": "Rolo de Espuma",
@@ -168,32 +168,32 @@ const translatedExercises = [
         "muscle": "Isquiotibiais",
         "equipment": "Apenas o Corpo",
         "difficulty": "Iniciante",
-        "instructions": "Deite-se de costas com uma perna estendida acima de você, com o quadril a noventa graus. Mantenha a outra perna reta no chão. Passe uma faixa, banda ou corda sobre a bola do seu pé. Esta será sua posição inicial. Puxe a faixa para criar tensão nas panturrilhas e isquiotibiais. Mantenha este alongamento por 10-30 segundos e repita com a outra perna."
+        "instructions": "Deite-se de costas com uma perna estendida para cima, com o quadril a noventa graus. Mantenha a outra perna reta no chão. Passe uma faixa, banda ou corda sobre a bola do seu pé. Esta será sua posição inicial. Puxe a faixa para criar tensão nas panturrilhas e isquiotibiais. Mantenha este alongamento por 10-30 segundos e repita com a outra perna."
     },
     {
         "id": 16,
         "name": "Hamstring-SMR",
-        "brName": "SMR de Isquiotibiais",
+        "brName": "Liberação Miofascial de Isquiotibiais com Rolo",
         "type": "Alongamento",
         "muscle": "Isquiotibiais",
         "equipment": "Rolo de Espuma",
         "difficulty": "Iniciante",
-        "instructions": "Em posição sentada, estenda as pernas sobre um rolo de espuma para que ele fique posicionado na parte de trás das pernas superiores. Coloque as mãos ao lado ou atrás de você para ajudar a suportar seu peso. Esta será sua posição inicial. Usando as mãos, levante os quadris do chão e desloque o peso sobre o rolo de espuma para uma perna. Relaxe os isquiotibiais da perna que você está alongando. Role sobre a espuma de baixo do quadril até acima da parte de trás do joelho, pausando nos pontos de tensão por 10-30 segundos. Repita para a outra perna."
+        "instructions": "Em posição sentada, estenda as pernas sobre um rolo de espuma para que ele fique posicionado na parte posterior das pernas. Coloque as mãos ao lado ou atrás de você para ajudar a suportar seu peso. Esta será sua posição inicial. Usando as mãos, levante os quadris do chão e desloque o peso sobre o rolo de espuma para uma perna. Relaxe os isquiotibiais da perna que você está alongando. Role sobre a espuma de baixo do quadril até acima da parte de trás do joelho, pausando nos pontos de tensão por 10-30 segundos. Repita para a outra perna."
     },
     {
         "id": 17,
         "name": "Upper Back-Leg Grab",
-        "brName": "Agarrar a Perna nas Costas",
+        "brName": "Segurando o posterior da coxa",
         "type": "Alongamento",
         "muscle": "Isquiotibiais",
         "equipment": "Apenas o Corpo",
         "difficulty": "Iniciante",
-        "instructions": "Sentado, incline-se para frente para abraçar suas coxas por baixo com os dois braços. Mantenha os joelhos juntos e as pernas estendidas enquanto você traz seu peito em direção aos joelhos. Você também pode alongar as costas médias puxando as costas para longe dos joelhos enquanto os abraça."
+        "instructions": "Sentado, incline-se para frente para abraçar suas coxas na altura do joelho por baixo com os dois braços. Mantenha os joelhos juntos e as pernas estendidas enquanto você traz seu peito em direção aos joelhos. Você também pode alongar as costas médias puxando as costas para longe dos joelhos enquanto os abraça."
     },
     {
         "id": 18,
         "name": "Dancer's Stretch",
-        "brName": "Alongamento da Bailarina",
+        "brName": "Alongamento da Dançarina",
         "type": "Alongamento",
         "muscle": "Parte Inferior da Coxa",
         "equipment": "Apenas o Corpo",
@@ -203,7 +203,7 @@ const translatedExercises = [
     {
         "id": 19,
         "name": "Elbow Circles",
-        "brName": "Círculos de Cotovelo",
+        "brName": "Círculos com os Cotovelos",
         "type": "Alongamento",
         "muscle": "Ombros",
         "equipment": "Apenas o Corpo",
