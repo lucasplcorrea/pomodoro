@@ -94,47 +94,42 @@ function secondsConvert(second) {
 function countDown() {
     timerStatus.innerHTML = timerType;
     if (currentTime > 0) {
-        currentTime --;
+        currentTime--;
         currentTimer();
         handleTotalProgress(startTime, currentTime);
         handleSecondsProgress(currentTime);
-    if (currentTime === 0) {
-        if (timerType === 'Foco') {
-        currentTime = breakTime;
-        startTime = breakTime;
-        timerType = 'Pausa';
-        timerStatus.innerHTML = timerType;
-        showNotification("Tempo de pausa iniciado!");
-        
-        // Abrir o modal quando o tempo de pausa iniciar
-        var modal = document.getElementById("exampleModal");
-        modal.classList.add("show");
-        modal.style.display = "block";
+        if (currentTime === 0) {
+            if (timerType === 'Foco') {
+                currentTime = breakTime;
+                startTime = breakTime;
+                timerType = 'Pausa';
+                timerStatus.innerHTML = timerType;
+                showNotification("Tempo de pausa iniciado!");
+                
+                // Simular clique para abrir o modal
+                document.getElementById("btExibeExercicio").click();
+            } else {
+                currentTime = focusTime;
+                startTime = focusTime;
+                timerType = 'Foco';
+                timerStatus.innerHTML = timerType;
+                showNotification("Tempo de foco iniciado!");
+                
+                // Simular clique para fechar o modal
+                document.getElementById("closeModal").click();
+            }
         }
-        else {
-        currentTime = focusTime;
-        startTime = focusTime;
-        timerType = 'Foco';
-        timerStatus.innerHTML = timerType;
-        showNotification("Tempo de foco iniciado!");
-        
-        // Fechar o modal quando o tempo de pausa acabar
-        var modal = document.getElementById("exampleModal");
-        modal.classList.remove("show");
-        modal.style.display = "none";
-        }
-    }
     }
 }
 
-// Event Listener para o botão de Fechar do modal
-document.getElementById("closeModal").addEventListener("click", function() {
-    if (timerActive) { 
-        var modal = document.getElementById("exampleModal");
-        modal.classList.remove("show");
-        modal.style.display = "none";
-    }
-});
+// // Event Listener para o botão de Fechar do modal
+// document.getElementById("closeModal").addEventListener("click", function() {
+//     if (timerActive) { 
+//         var modal = document.getElementById("exampleModal");
+//         modal.classList.remove("show");
+//         modal.style.display = "none";
+//     }
+// });
 
 // Função para iniciar ou pausar o temporizador
 function toggleTimer() {
