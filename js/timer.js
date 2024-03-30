@@ -104,18 +104,37 @@ function countDown() {
         startTime = breakTime;
         timerType = 'Pausa';
         timerStatus.innerHTML = timerType;
-        alert("Tempo de pausa iniciado!");
+        showNotification("Tempo de pausa iniciado!");
+        
+        // Abrir o modal quando o tempo de pausa iniciar
+        var modal = document.getElementById("exampleModal");
+        modal.classList.add("show");
+        modal.style.display = "block";
         }
         else {
         currentTime = focusTime;
         startTime = focusTime;
         timerType = 'Foco';
         timerStatus.innerHTML = timerType;
-        alert("Tempo de foco iniciado!");
+        showNotification("Tempo de foco iniciado!");
+        
+        // Fechar o modal quando o tempo de pausa acabar
+        var modal = document.getElementById("exampleModal");
+        modal.classList.remove("show");
+        modal.style.display = "none";
         }
     }
     }
 }
+
+// Event Listener para o botão de Fechar do modal
+document.getElementById("closeModal").addEventListener("click", function() {
+    if (timerActive) { 
+        var modal = document.getElementById("exampleModal");
+        modal.classList.remove("show");
+        modal.style.display = "none";
+    }
+});
 
 // Função para iniciar ou pausar o temporizador
 function toggleTimer() {
@@ -177,18 +196,17 @@ for (var i = 0; i < plusButton.length; i++) {
     });
 }
 
-// Event Listeners para os botões de decremento de tempo
 for (var i = 0; i < minusButton.length; i++) {
     minusButton[i].addEventListener('click', function (e) {
         if (!timerActive) {
             if (e.target.id === 'focus-minus') {
-                if (focusTime >= 300) {
+                if (focusTime > 300) {
                     focusTime -= 300;
                     currentTime = focusTime;
                     startTime = focusTime;
                     displayChangedTime(e, focusTime);
                     currentTimer();
-                } else if (focusTime === 300 && breakTime >= 300) {
+                } else if (focusTime === 300 && breakTime >= 600) {
                     focusTime -= 300;
                     breakTime -= 300;
                     currentTime = focusTime;
@@ -206,6 +224,24 @@ for (var i = 0; i < minusButton.length; i++) {
             }
         }
     });
+}
+// Função para mostrar uma notificação
+function showNotification(message) {
+    if (Notification.permission === "granted") {
+        // Se as notificações estiverem permitidas, cria a notificação
+        var notification = new Notification("Pomodoro Timer", {
+            body: message,
+        });
+    } else if (Notification.permission !== "denied") {
+        // Se as notificações ainda não foram solicitadas, solicita ao usuário
+        Notification.requestPermission().then(function (permission) {
+            if (permission === "granted") {
+                var notification = new Notification("Pomodoro Timer", {
+                    body: message,
+                });
+            }
+        });
+    }
 }
 
 // Event Listener que executa quando o DOM é carregado para exibir o temporizador inicial
