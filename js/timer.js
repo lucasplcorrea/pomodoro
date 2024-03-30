@@ -23,6 +23,12 @@ let focusTime = 1500; // Tempo de foco padrão (em segundos)
 let breakTime = 300; // Tempo de pausa padrão (em segundos)
 let currentTime = 1500; // Tempo atual do temporizador (em segundos)
 
+//Variáveis do Contador 
+let workCounter = 0;
+let pauseCounter = 0;
+let workTime = 0; 
+let pauseTime = 0;
+
 // Função para exibir o tempo do temporizador na interface
 function timerDisplay() {
     focusT.innerHTML = minutesDisplay(focusTime) + ' min';
@@ -104,7 +110,9 @@ function countDown() {
                 startTime = breakTime;
                 timerType = 'Pausa';
                 timerStatus.innerHTML = timerType;
-                showNotification("Tempo de pausa iniciado!");
+                workCounter++; 
+                workTime = parseInt((workTime + focusTime) / 60); 
+                showNotification(`Tempo de pausa iniciado! ${workCounter} tempo de foco realizado! ${workTime} minutos no total!`);
                 
                 // Simular clique para abrir o modal
                 document.getElementById("btExibeExercicio").click();
@@ -113,7 +121,9 @@ function countDown() {
                 startTime = focusTime;
                 timerType = 'Foco';
                 timerStatus.innerHTML = timerType;
-                showNotification("Tempo de foco iniciado!");
+                pauseCounter++; 
+                pauseTime = parseInt((pauseTime + breakTime) / 60); 
+                showNotification(`Tempo de foco iniciado! ${pauseCounter} tempo de pausa realizado! ${pauseTime} minutos no total!`);
                 
                 // Simular clique para fechar o modal
                 document.getElementById("closeModal").click();
@@ -121,15 +131,6 @@ function countDown() {
         }
     }
 }
-
-// // Event Listener para o botão de Fechar do modal
-// document.getElementById("closeModal").addEventListener("click", function() {
-//     if (timerActive) { 
-//         var modal = document.getElementById("exampleModal");
-//         modal.classList.remove("show");
-//         modal.style.display = "none";
-//     }
-// });
 
 // Função para iniciar ou pausar o temporizador
 function toggleTimer() {
