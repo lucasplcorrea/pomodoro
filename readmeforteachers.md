@@ -40,7 +40,7 @@ O projeto Pomodoro é uma aplicação voltada para pessoas que trabalham sentada
 
 ### Commit Final para Vídeo Explicativo 🎥
 
-- [x] Commit final para vídeo explicativo: [Link para o Commit](inserir_link_aqui)
+- [x] Commit final para vídeo explicativo: [Link para o Commit](https://github.com/lucasplcorrea/pomodoro/commit/ccb5225a82fefd6e188a0b8daf16f4b19a9cf6bd)
 
 ## Observações para Professores 📝
 
